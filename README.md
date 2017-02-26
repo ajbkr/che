@@ -1,4 +1,4 @@
 Che
 ===
 
-Che is a template-drive code generator for Node.js.
+Che is a template-driven code generator for Node.js.
