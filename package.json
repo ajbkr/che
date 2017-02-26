@@ -1,0 +1,19 @@
+{
+  "name": "che",
+  "version": "0.0.1",
+  "description": "Template-driven code generator",
+  "main": "che.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew J. Baker <andrew_j_baker2@hotmail.com>",
+  "license": "MIT",
+  "bin": {
+    "che": "che.js"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.6",
+    "json-pointer-rfc6901": "^1.1.1"
+  },
+  "private": true
+}
