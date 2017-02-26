@@ -10,12 +10,9 @@ var conf    = require(path.join(process.cwd(), process.argv[2])),
 
 var schema = require(path.join(process.cwd(), process.argv[3]));
 
-Handlebars.registerHelper('toCamelCase',  helpers.toCamelCase);
-Handlebars.registerHelper('toKebabCase',  helpers.toKebabCase);
-Handlebars.registerHelper('toLowerCase',  helpers.toLowerCase);
-Handlebars.registerHelper('toPascalCase', helpers.toPascalCase);
-Handlebars.registerHelper('toStartCase',  helpers.toStartCase);
-Handlebars.registerHelper('toUpperCase',  helpers.toUpperCase);
+for (var name in helpers) {
+  Handlebars.registerHelper(name, helpers[name]);
+}
 
 for (var ptr in generators) {
   for (var currentValue in generators[ptr]) {
