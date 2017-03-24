@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew J. Baker <andrew_j_baker2@hotmail.com>",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "bin": {
     "che": "che.js"
   },
