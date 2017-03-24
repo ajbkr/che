@@ -1,17 +1,17 @@
 #!/usr/bin/env node
-var fs      = require('fs'),
- Handlebars = require('handlebars'),
- path       = require('path'),
- pointer    = require('json-pointer-rfc6901');
+var changeCase = require('change-case'),
+ fs            = require('fs'),
+ Handlebars    = require('handlebars'),
+ path          = require('path'),
+ pointer       = require('json-pointer-rfc6901');
 
 var conf    = require(path.join(process.cwd(), process.argv[2])),
- generators = conf.generators,
- helpers    = require('./helpers');
+ generators = conf.generators;
 
 var schema = require(path.join(process.cwd(), process.argv[3]));
 
-for (var name in helpers) {
-  Handlebars.registerHelper(name, helpers[name]);
+for (var name in changeCase) {
+  Handlebars.registerHelper(name, changeCase[name]);
 }
 
 for (var ptr in generators) {
