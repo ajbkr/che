@@ -15,12 +15,12 @@ for (var name in changeCase) {
 }
 
 for (var ptr in generators) {
-  for (var currentValue in generators[ptr]) {
-    var template = Handlebars.compile(fs.readFileSync(currentValue).toString());
+  for (var templateFile in generators[ptr]) {
+    var template = Handlebars.compile(fs.readFileSync(templateFile).toString());
 
     var output = template(pointer.get(schema, ptr));
 
-    fs.writeFile(generators[ptr][currentValue], output, function(err) {
+    fs.writeFile(generators[ptr][templateFile], output, function(err) {
       if (err) {
         throw err;
       }
