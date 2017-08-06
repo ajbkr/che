@@ -7,7 +7,7 @@ Synopsis
 --------
 
 ```
-che che.conf.js schema.json
+che che.conf.js
 ```
 
 Description

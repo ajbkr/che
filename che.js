@@ -6,9 +6,8 @@ var fs         = require('fs'),
 
 var conf    = require(path.join(process.cwd(), process.argv[2])),
  generators = conf.generators,
- helpers    = conf.helpers;
-
-var schema = require(path.join(process.cwd(), process.argv[3]));
+ helpers    = conf.helpers,
+ schema     = conf.schema;
 
 for (var name in helpers) {
   Handlebars.registerHelper(name, helpers[name]);

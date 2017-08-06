@@ -1,6 +1,6 @@
 {
   "name": "che",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Template-driven code generator",
   "main": "che.js",
   "scripts": {
