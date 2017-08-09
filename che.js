@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-var fs         = require('fs'),
- Handlebars    = require('handlebars'),
- path          = require('path'),
- pointer       = require('json-pointer-rfc6901');
+var fs      = require('fs'),
+ Handlebars = require('handlebars'),
+ path       = require('path'),
+ pointer    = require('json-pointer-rfc6901');
 
 var conf    = require(path.join(process.cwd(), process.argv[2])),
  generators = conf.generators,
