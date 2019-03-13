@@ -1,28 +1,26 @@
 #!/usr/bin/env node
-var fs      = require('fs'),
- Handlebars = require('handlebars'),
- path       = require('path'),
- pointer    = require('json-pointer-rfc6901');
+const fs = require('fs')
+const Handlebars = require('handlebars')
+const path = require('path')
+const pointer = require('json-pointer-rfc6901')
 
-var conf    = require(path.join(process.cwd(), process.argv[2])),
- generators = conf.generators,
- helpers    = conf.helpers,
- schema     = conf.schema;
+const { generators, helpers, schema } =
+  require(path.join(process.cwd(), process.argv[2]))
 
-for (var name in helpers) {
-  Handlebars.registerHelper(name, helpers[name]);
+for (let name in helpers) {
+  Handlebars.registerHelper(name, helpers[name])
 }
 
-for (var ptr in generators) {
-  for (var templateFile in generators[ptr]) {
-    var template = Handlebars.compile(fs.readFileSync(templateFile).toString());
+for (let ptr in generators) {
+  for (let templateFile in generators[ptr]) {
+    const template = Handlebars.compile(fs.readFileSync(templateFile).toString())
 
-    var output = template(pointer.get(schema, ptr));
+    const output = template(pointer.get(schema, ptr))
 
-    fs.writeFile(generators[ptr][templateFile], output, function(err) {
+    fs.writeFile(generators[ptr][templateFile], output, err => {
       if (err) {
-        throw err;
+        throw err
       }
-    });
+    })
   }
 }
