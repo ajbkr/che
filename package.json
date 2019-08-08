@@ -13,7 +13,7 @@
     "che": "che.js"
   },
   "dependencies": {
-    "handlebars": "^4.1.0",
+    "handlebars": "^4.1.2",
     "json-pointer-rfc6901": "^1.1.1"
   },
   "private": true,
