@@ -1,19 +1,17 @@
 #!/usr/bin/env node
 const fs = require('fs')
-const Handlebars = require('handlebars')
-const path = require('path')
 const pointer = require('json-pointer-rfc6901')
+const _ = { template: require('lodash.template') }
+const path = require('path')
 
 const { generators, helpers, schema } =
   require(path.join(process.cwd(), process.argv[2]))
 
-for (let name in helpers) {
-  Handlebars.registerHelper(name, helpers[name])
-}
+const imports = { imports: helpers }
 
-for (let ptr in generators) {
-  for (let templateFile in generators[ptr]) {
-    const template = Handlebars.compile(fs.readFileSync(templateFile).toString())
+for (const ptr in generators) {
+  for (const templateFile in generators[ptr]) {
+    const template = _.template(fs.readFileSync(templateFile).toString(), imports)
 
     const output = template(pointer.get(schema, ptr))
 
