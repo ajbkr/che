@@ -17,7 +17,9 @@ Essentially, Che generates code from templates that are populated with data read
 from a schema indexed using
 [JSON Pointer (RFC6901)](https://tools.ietf.org/html/rfc6901).
 
-Che is template library-agnostic. Examples use Lodash's template method.
+Che is template-engine agnostic; example uses
+[Lodash's template method](https://www.npmjs.com/package/lodash.template) and
+[generic JavaScript helpers](https://www.npmjs.com/package/template-helpers#string).
 
 Example che.conf.js
 -------------------

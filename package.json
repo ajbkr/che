@@ -1,13 +1,13 @@
 {
   "name": "@ajbkr/che",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Template-driven code generator",
   "main": "che.js",
   "scripts": {
     "lint": "standard",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Andrew J. Baker",
+  "author": "Andrew J. Baker <andrew_j_baker2@hotmail.com>",
   "homepage": "https://github.com/ajbkr/che",
   "license": "ISC",
   "bin": {
