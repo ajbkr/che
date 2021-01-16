@@ -1,9 +1,10 @@
 {
   "name": "@ajbkr/che",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Template-driven code generator",
   "main": "che.js",
   "scripts": {
+    "example": "./che.js example/che.conf.js",
     "lint": "standard",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +22,8 @@
     "json-pointer-rfc6901": "^1.1.1"
   },
   "devDependencies": {
-    "standard": "^16.0.3"
+    "lodash.template": "^4.5.0",
+    "standard": "^16.0.3",
+    "template-helpers": "^1.0.1"
   }
 }
