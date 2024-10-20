@@ -18,14 +18,14 @@ from a JSON schema (or JS object), indexed using
 [JSON Pointer (RFC6901)](https://tools.ietf.org/html/rfc6901).
 
 Che is template-engine agnostic; example uses
-[Lodash's template method](https://www.npmjs.com/package/lodash.template) and
+[Lodash's template method](https://www.npmjs.com/package/lodash) and
 [generic JavaScript helpers](https://www.npmjs.com/package/template-helpers#string).
 
 Example che.conf.js
 -------------------
 
 ```
-const template = require('lodash.template')
+const template = require('lodash/template')
 
 const helpers = require('template-helpers')('string')
 

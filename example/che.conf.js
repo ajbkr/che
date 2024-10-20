@@ -1,4 +1,4 @@
-const { template } = require('lodash')
+const template = require('lodash/template')
 
 const helpers = require('template-helpers')('string')
 
