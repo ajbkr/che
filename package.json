@@ -1,6 +1,6 @@
 {
   "name": "@ajbkr/che",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Template-driven code generator",
   "main": "che.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "lodash": "^4.17.21",
-    "standard": "^16.0.3",
+    "standard": "^17.1.2",
     "template-helpers": "^1.0.1"
   }
 }
